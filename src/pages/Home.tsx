@@ -5,11 +5,99 @@ import { Heart, Shield, Calendar, MessageSquare, X } from 'lucide-react'; // Add
 // Import local hero image
 import heroImage from '../assets/background.png'; // Update with the correct path
 import Header from './Header';
+interface ChatQuestion {
+  id: number;
+  question: string;
+  options: string[];
+}
+
+const chatQuestions: ChatQuestion[] = [
+  {
+    id: 1,
+    question: 'كيف تحسيت اليوم؟',
+    options: ['لباس، مرتاحة', 'متقلقة شوية', 'تعبانة برشا', 'ما نجمش نتحمل أكثر'],
+  },
+  {
+    id: 2,
+    question: 'نمت مليح البارح؟',
+    options: ['نمت باهي', 'نمت شوية', 'نمت متقطّع', 'ما نمتش تقريبا'],
+  },
+  {
+    id: 3,
+    question: 'ضحكت على حاجة اليوم؟',
+    options: ['إي، ضحكت برشا', 'ضحكت شوية', 'نادرا', 'لا، ما ضحكتش'],
+  },
+  {
+    id: 4,
+    question: 'تحس روحك مرتبطة بالبيبي؟',
+    options: ['برشا، نحس برابط قوي', 'نحاول', 'شوية صعوبة', 'لا، نحس روحي بعيدة'],
+  },
+  {
+    id: 5,
+    question: 'عندك فكرة تأذي روحك؟',
+    options: ['لا، أبدًا', 'مرات نخمم', 'إيه، شوية', 'ديما'],
+  },
+];
+
+
+
+const ChatbotQuestions: React.FC = () => {
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [userAnswers, setUserAnswers] = useState<string[]>([]);
+
+  const handleOptionClick = async (option: string) => {
+    const question = chatQuestions[currentQuestionIndex];
+
+    setUserAnswers([...userAnswers, option]);
+
+    try {
+      await fetch('http://localhost:5000/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          question: question.question,
+          answer: option,
+        }),
+      });
+    } catch (err) {
+      console.error('Failed to send response:', err);
+    }
+
+    if (currentQuestionIndex < chatQuestions.length - 1) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+    } else {
+      // All questions answered
+      alert('شكراً! تمت الإجابة على كل الأسئلة ❤️');
+    }
+  };
+
+  const current = chatQuestions[currentQuestionIndex];
+
+  return (
+   
+      <div className="grid grid-cols-1 gap-2">
+        {current.options.map((option, idx) => (
+          <button
+            key={idx}
+            onClick={() => handleOptionClick(option)}
+            className="bg-[#e9e7e3] text-[#452923] py-2 px-4 rounded hover:bg-[#8fc4f5] hover:text-white transition"
+          >
+            {option}
+          </button>
+        ))}
+      </div>
+
+  );
+};
+
 
 export const Home = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [userInput, setUserInput] = useState('');
   const [botResponse, setBotResponse] = useState('');
+const [answerOptions, setAnswerOptions] = useState([]); // New state for answer options
 
   const handleChatbotClick = () => {
     setIsChatOpen(true); // Open the chatbot modal or interface
@@ -81,7 +169,7 @@ export const Home = () => {
        
           <ServiceCard
             number="01"
-            title="ة"
+            title="خدمة الحاضن"
             description="إكتشف حاضنات موثوقات يوفّرو رعاية تتماشى مع احتياجات عايلتك، لدعم حضانة بلا توتّر"
           />
           {/* Mental Health Support */}
@@ -151,23 +239,7 @@ export const Home = () => {
               <X size={20} />
             </button>
           </div>
-          <textarea
-            value={userInput}
-            onChange={(e) => setUserInput(e.target.value)}
-            placeholder="Ask me something..."
-            className="w-full h-20 p-2 border rounded mt-4"
-          ></textarea>
-          <button
-            onClick={handleSendMessage}
-            className="w-full mt-4 bg-[#e9e7e3] text-white py-2 rounded"
-          >
-            Send
-          </button>
-          {botResponse && (
-            <div className="mt-4 text-pink-700">
-              <strong>Bot:</strong> {botResponse}
-            </div>
-          )}
+   <ChatbotQuestions/>
         </div>
       )}
 </div>

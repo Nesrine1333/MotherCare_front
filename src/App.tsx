@@ -12,12 +12,14 @@ import SignUpPage from './pages/Login';
 import Dashboard from './pages/user/dashboard';
 import EPDSForm from './pages/user/Form';
 
+
 function App() {
   return (
     <Router>
       <LoadingScreen />
       <div className="min-h-screen bg-pink-50">
         <Navbar />
+ 
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
