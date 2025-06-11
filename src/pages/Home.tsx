@@ -82,18 +82,18 @@ export const Home = () => {
           <ServiceCard
             number="01"
             title="خدمة الحاضن"
-            description="Discover reliable and caring nannies tailored to your family's needs for stress-free childcare support."
+            description="إكتشف حاضنات موثوقات يوفّرو رعاية تتماشى مع احتياجات عايلتك، لدعم حضانة بلا توتّر"
           />
           {/* Mental Health Support */}
           <ServiceCard
             number="02"
-            title="Mental Health Support"
-            description="Access professional mental health support with compassionate and confidential virtual consultations."
+            title="دعم الصحّة النفسيّة"
+            description="تمكّن من الوصول لدعم محترف للصحة النفسية عبر استشارات افتراضية سرية ومليانة رحمة."
           />
           {/* Nutrition Chart */}
           <ServiceCard
             number="03"
-            title="Nutrition Chart"
+            title="جدول التغذية"
             description="Receive personalized nutrition charts crafted by expert dietitians to match your health goals."
           />
           {/* Personalized Journey Tracker */}
