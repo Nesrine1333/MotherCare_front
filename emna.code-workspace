@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "../drone-control"
+		},
+		{
+			"path": "."
+		},
+		{
+			"name": "espHEHE",
+			"path": "../../OneDrive - Ministere de l'Enseignement Superieur et de la Recherche Scientifique/Documents/PlatformIO/Projects/espHEHE"
+		},
+		{
+			"name": "MotherCare-Project",
+			"path": "MotherCare-Project"
+		},
+		{
+			"name": "Momease",
+			"path": "Momease"
+		}
+	],
+	"settings": {}
+}
