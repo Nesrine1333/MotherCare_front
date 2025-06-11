@@ -1,0 +1,29 @@
+#home {
+    position: relative;
+    padding-bottom: 1rem;
+    z-index: 1; /* Ensure content appears above the pseudo-element */
+    color: white; /* Ensure text contrasts against the background */
+}
+
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Send the background behind the content */
+    
+    /* Background settings */
+    background-image: url('../assets/background.png');
+    background-size:cover;
+    background-position: center;
+    background-color: #b2dcc2; 
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /* Blur effect */
+    filter: blur(1px); /* Adjust blur level */
+
+    /* Ensure pseudo-element covers the entire container */
+}
