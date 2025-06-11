@@ -27,7 +27,7 @@ const Header = () => {
 رعاية كاملة بعد الولادة مصمّمة حسب احتياجاتك الخاصّة            </p>
        
 <Link
-  to="/signup"
+  to="/register"
   className="inline-block bg-[#8fc4f5] text-white px-8 py-4 rounded-lg text-lg hover:bg-[#2e1042] transition-colors "
 >
 ابدأ رحلتك</Link>

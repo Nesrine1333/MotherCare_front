@@ -8,7 +8,7 @@ const Dashboard: React.FC = () => {
 
 
       {/* Main Content */}
-      <main className="   w-full rounded-lg shadow-md">
+      <main className=" w-full rounded-lg shadow-md">
         {/* Profile Section */}
         <section className=" p-6 rounded-lg shadow-md border  mb-8">
           <h3 className="text-2xl text-[#2e1042] font-bold mb-4">Profile</h3>

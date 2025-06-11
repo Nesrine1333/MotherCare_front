@@ -81,7 +81,7 @@ export const Home = () => {
        
           <ServiceCard
             number="01"
-            title="خدمة الحاضن"
+            title="ة"
             description="إكتشف حاضنات موثوقات يوفّرو رعاية تتماشى مع احتياجات عايلتك، لدعم حضانة بلا توتّر"
           />
           {/* Mental Health Support */}
@@ -108,7 +108,7 @@ export const Home = () => {
       {/* Features */}
       <section className="bg-[#e9e7e3] py-16">
         <div className="max-w-7xl mx-auto px-4 ">
-          <h2 className="text-4xl  text-pink-800 text-center mb-12">
+          <h2 className="text-4xl  text-[#452923] text-center mb-12">
             Why Choose MotherCare?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -133,7 +133,7 @@ export const Home = () => {
 
       {/* Chatbot Icon */}
       <div
-        className="fixed bottom-8 right-8 bg-[#e9e7e3] p-4 rounded-full cursor-pointer hover:bg-pink-700 transition-colors shadow-lg"
+        className="fixed bottom-8 right-8 bg-[#e9e7e3] p-4 rounded-full cursor-pointer hover:bg-[#8fc4f5] transition-colors shadow-lg"
         onClick={handleChatbotClick}
       >
         <MessageSquare size={40} className="text-white" />
@@ -146,7 +146,7 @@ export const Home = () => {
             <h3 className="text-lg font-bold">MotherCare Assistant</h3>
             <button
               onClick={handleCloseChatbot}
-              className="text-pink-600 hover:text-pink-700"
+              className="text-[#452923] hover:text-[#452923]"
             >
               <X size={20} />
             </button>

@@ -6,11 +6,11 @@ const SignUpPage = () => {
 	
 
    const setIsMenuOpen=()=>{
-navigate('/user')
+navigate('/form')
    }
   return (
-    <div className="w-full flex items-center justify-center bg-[#fefefe] px-16">
-      <div className="w-full p-8 bg-white border rounded-lg shadow-md shadow-[#583733]">
+    <div className="w-full px-16 py-12 ">
+      <div className="w-full p-8 rounded-lg ">
         <h2 className="text-3xl font-bold mb-6 text-center text-[#2e1042]">Create an Account</h2>
         <form className="space-y-4">
           <div>

@@ -3,7 +3,7 @@ import { Heart, Mail, Phone, MapPin } from 'lucide-react';
 
 export const Footer = () => {
   return (
-    <footer className="bg-pink-100 border-t border-pink-200 pt-12 pb-8">
+    <footer className="bg-[#8fc4f5]  border-pink-200 pt-12 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           

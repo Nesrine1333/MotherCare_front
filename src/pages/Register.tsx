@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import SignUpPage from './Login';
 
 export const Register = () => {
-  const [role, setRole] = useState<'mother' | 'nanny' | null>(null);
+  const [role, setRole] = useState<'mother' | 'nanny' |' Therapist'| null>(null);
 
   return (
-    <div className="min-h-screen bg-pink-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-[#e9e7e3] py-12 px-4 sm:px-6 lg:px-8">
       {!role ? (
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-4xl font-bold text-pink-800 text-center mb-8 mt-12">
+          <h1 className="text-4xl font-bold text-[#452923] text-center mb-8 mt-12">
             Choose Your Role
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -51,7 +52,7 @@ export const Register = () => {
           </div>
         </div>
       ) : (
-        <RegistrationForm role={role} onBack={() => setRole(null)} />
+        <SignUpPage />
       )}
     </div>
   );
@@ -63,11 +64,11 @@ const RoleCard = ({ title, description, features, onClick }) => (
     className="bg-white p-8 rounded-lg shadow-lg cursor-pointer"
     onClick={onClick}
   >
-    <h2 className="text-2xl font-bold text-pink-800 mb-4">{title}</h2>
-    <p className="text-pink-700 mb-6">{description}</p>
+    <h2 className="text-2xl font-bold text-[#452923] mb-4">{title}</h2>
+    <p className="text-[#452923] mb-6">{description}</p>
     <ul className="space-y-2">
       {features.map((feature, index) => (
-        <li key={index} className="flex items-center text-pink-600">
+        <li key={index} className="flex items-center text-[#2e1042]">
           <span className="mr-2">•</span>
           {feature}
         </li>

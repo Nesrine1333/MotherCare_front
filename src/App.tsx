@@ -10,6 +10,7 @@ import { Community } from './pages/Community';
 import { Education } from './pages/Education';
 import SignUpPage from './pages/Login';
 import Dashboard from './pages/user/dashboard';
+import EPDSForm from './pages/user/Form';
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/signup" element={<SignUpPage />} />
         <Route path="/user" element={<Dashboard />} />
+        <Route path="/form" element={<EPDSForm />} />
+
             <Route path="/services" element={<Services />} />
             <Route path="/community" element={<Community />} />
             <Route path="/education" element={<Education />} />

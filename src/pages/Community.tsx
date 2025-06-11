@@ -3,21 +3,21 @@ import { Users, Calendar, MessageCircle } from 'lucide-react';
 
 export const Community = () => {
   return (
-    <div className="min-h-screen bg-pink-50 py-12 mt-12 font-serif">
+    <div className="min-h-screen bg-[#e9e7e3] py-12 mt-12 font-serif">
       <div className="max-w-7xl mx-auto px-4">
         {/* Hero Section */}
         <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-pink-800 mb-4"><br></br>
+          <h1 className="text-4xl md:text-5xl font-bold text-[#452923] mb-4"><br></br>
             Join Our Community
           </h1>
-          <p className="text-pink-600 text-lg max-w-2xl mx-auto">
+          <p className="text-[#452923] text-lg max-w-2xl mx-auto">
             You are not alone, Connect with other mothers, share experiences, and support each other through your journey
           </p>
         </section>
 
         {/* Discussion Forums */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-pink-800 mb-8">Discussion Forums</h2><br></br>
+          <h2 className="text-3xl font-bold text-[#8fc4f5] mb-8">Discussion Forums</h2><br></br>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {forums.map((forum) => (
               <ForumCard key={forum.id} {...forum} />
@@ -28,7 +28,7 @@ export const Community = () => {
         {/* Upcoming Meetups */}
         <section className="bg-white py-16 -mx-4 px-4">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-pink-800 mb-8">Upcoming Meetups</h2>
+            <h2 className="text-3xl font-bold text-[#452923] mb-8">Upcoming Meetups</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {meetups.map((meetup) => (
                 <MeetupCard key={meetup.id} {...meetup} />

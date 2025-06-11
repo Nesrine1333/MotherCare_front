@@ -3,21 +3,21 @@ import { Book, Video, FileText, Download } from 'lucide-react';
 
 export const Education = () => {
   return (
-    <div className="min-h-screen bg-pink-50 py-12 mt-12"> <br></br>
+    <div className="min-h-screen bg-[#e9e7e3] py-12 mt-12"> <br></br>
       <div className="max-w-7xl mx-auto px-4">
         {/* Hero Section */}
         <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-pink-800 mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#452923] mb-4">
             Educational Resources
           </h1>
-          <p className="text-pink-600 text-lg max-w-2xl mx-auto">
+          <p className="text-[#452923] text-lg max-w-2xl mx-auto">
             Comprehensive guides and resources to support you through your motherhood journey
           </p>
         </section>
 
         {/* Featured Guides */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-pink-800 mb-8">Featured Guides</h2>
+          <h2 className="text-3xl font-bold text-[#452923] mb-8">Featured Guides</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {guides.map((guide) => (
               <GuideCard key={guide.id} {...guide} />
@@ -28,7 +28,7 @@ export const Education = () => {
         {/* Video Tutorials */}
         <section className="bg-white py-16 -mx-4 px-4 mb-16">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-pink-800 mb-8">Video Tutorials</h2>
+            <h2 className="text-3xl font-bold text-[#452923] mb-8">Video Tutorials</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {videos.map((video) => (
                 <VideoCard key={video.id} {...video} />
@@ -39,7 +39,7 @@ export const Education = () => {
 
         {/* Downloadable Resources */}
         <section>
-          <h2 className="text-3xl font-bold text-pink-800 mb-8">Downloadable Resources</h2>
+          <h2 className="text-3xl font-bold text-[#452923] mb-8">Downloadable Resources</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {resources.map((resource) => (
               <ResourceCard key={resource.id} {...resource} />
@@ -54,15 +54,15 @@ export const Education = () => {
 const GuideCard = ({ title, description, topics, readTime }) => (
   <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
     <div className="flex items-start justify-between mb-4">
-      <h3 className="text-xl font-semibold text-pink-800">{title}</h3>
-      <Book className="w-6 h-6 text-pink-600" />
+      <h3 className="text-xl font-semibold text-[#452923]">{title}</h3>
+      <Book className="w-6 h-6 text-[#8fc4f5]" />
     </div>
     <p className="text-pink-600 mb-4">{description}</p>
     <div className="flex flex-wrap gap-2 mb-4">
       {topics.map((topic, index) => (
         <span
           key={index}
-          className="px-2 py-1 bg-pink-100 text-pink-600 rounded-full text-sm"
+          className="px-2 py-1 bg-pink-100 text-[#8fc4f5] rounded-full text-sm"
         >
           {topic}
         </span>
@@ -70,7 +70,7 @@ const GuideCard = ({ title, description, topics, readTime }) => (
     </div>
     <div className="flex justify-between items-center text-pink-700">
       <span>{readTime} min read</span>
-      <button className="text-pink-600 hover:text-pink-700">Read More →</button>
+      <button className="text-[#8fc4f5] hover:text-pink-700">Read More →</button>
     </div>
   </div>
 );
@@ -84,14 +84,14 @@ const VideoCard = ({ title, thumbnail, duration, instructor }) => (
     />
     <div className="p-6">
       <div className="flex items-start justify-between mb-2">
-        <h3 className="text-xl font-semibold text-pink-800">{title}</h3>
-        <Video className="w-6 h-6 text-pink-600" />
+        <h3 className="text-xl font-semibold text-[#452923]">{title}</h3>
+        <Video className="w-6 h-6 text-[#8fc4f5]" />
       </div>
       <div className="flex justify-between items-center text-pink-700">
         <span>{duration}</span>
         <span>By {instructor}</span>
       </div>
-      <button className="w-full mt-4 bg-pink-600 text-white py-2 rounded-md hover:bg-pink-700 transition-colors">
+      <button className="w-full mt-4 bg-[#8fc4f5] text-white py-2 rounded-md hover:bg-[#2e1042] transition-colors">
         Watch Now
       </button>
     </div>
@@ -101,7 +101,7 @@ const VideoCard = ({ title, thumbnail, duration, instructor }) => (
 const ResourceCard = ({ title, description, fileType, fileSize }) => (
   <div className="bg-white rounded-lg p-6 hover:shadow-lg transition-shadow">
     <div className="flex items-start justify-between mb-4">
-      <h3 className="text-xl font-semibold text-pink-800">{title}</h3>
+      <h3 className="text-xl font-semibold text-[#452923]">{title}</h3>
       <FileText className="w-6 h-6 text-pink-600" />
     </div>
     <p className="text-pink-600 mb-4">{description}</p>
